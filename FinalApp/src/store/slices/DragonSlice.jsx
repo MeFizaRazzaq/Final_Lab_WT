@@ -26,6 +26,10 @@ const DragonSlice = createSlice({
             console.log("add dragon",action.payload);
             state.push(action.payload);
         },
+        reserved(state,action){
+            console.log("reserve dragon",action.payload);
+            state.push(action.payload);
+        },
 
     }
 });
@@ -45,7 +49,7 @@ const MissionSlice = createSlice({
 console.log(DragonSlice.actions);
 
 export { DragonSlice,MissionSlice };
-export const {addDragon}= DragonSlice.actions;
+export const {addDragon,reserved}= DragonSlice.actions;
 
 export const {addMission}= MissionSlice.actions;
 
